@@ -7,7 +7,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs: EventArgs
     {
-        public ClearCounter selectedCounter;
+        public BaseCounter selectedCounter;
     }
     // SerializeField allows us to set the value of moveSpeed in the Unity Editor, even though it's private
     [SerializeField] private float moveSpeed = 7f;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     private Rigidbody rb;
     private bool isWalking;
     private Vector3 lastInteractDir;
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
 
     private void Awake()
@@ -69,22 +69,22 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
         if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask))
         {
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
+            if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
-                // Has ClearCounter
-                if (clearCounter != selectedCounter)
+                // Has BaseCounter
+                if (baseCounter != selectedCounter)
                 {
-                    selectedCounter = clearCounter;
-                    SetSelectedCounter(clearCounter);
+                    selectedCounter = baseCounter;
+                    SetSelectedCounter(baseCounter);
                 } else
                 {
                     selectedCounter = null;
-                    SetSelectedCounter(clearCounter);
+                    SetSelectedCounter(baseCounter);
                 }
             } else
             {
                 selectedCounter = null;
-                SetSelectedCounter(clearCounter);
+                SetSelectedCounter(baseCounter);
             }
         }
     }
@@ -147,7 +147,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpped);
     }
 
-    private void SetSelectedCounter(ClearCounter clearCounter)
+    private void SetSelectedCounter(BaseCounter clearCounter)
     {
         this.selectedCounter = clearCounter;
 
