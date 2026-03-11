@@ -338,6 +338,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7181447382813912939, guid: 73cacb6f742ca4c87aded40c2c6b2134, type: 3}
+      propertyPath: tomatoPrefab
+      value: 
+      objectReference: {fileID: 3311401382751477405, guid: a7a47bdab6d914512b638ed882d71e52, type: 3}
+    - target: {fileID: 7181447382813912939, guid: 73cacb6f742ca4c87aded40c2c6b2134, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b67c26698299a46bc8d32386e46e195d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -406,7 +414,7 @@ MonoBehaviour:
     LensShift: {x: 0, y: 0}
     GateFit: 2
     FocusDistance: 10
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 36, y: 24}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1034,7 +1042,7 @@ MonoBehaviour:
     LensShift: {x: 0, y: 0}
     GateFit: 2
     FocusDistance: 10
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 36, y: 24}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
