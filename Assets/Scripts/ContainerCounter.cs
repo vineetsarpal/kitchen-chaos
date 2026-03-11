@@ -7,8 +7,10 @@ public class ContainerCounter : BaseCounter
     public event EventHandler OnPlayerGrabbedObject;
     public override void Interact(Player player)
     {
-        if (!HasKitchenObject())
+        if (!player.HasKitchenObject())
         {
+            // Player is not carrying anything
+
             // Spawn a kitchen object
             Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
             
