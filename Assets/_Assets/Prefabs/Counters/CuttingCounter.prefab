@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8815793936296160785}
   - component: {fileID: 3361562433394302252}
   - component: {fileID: 8763216740145601517}
+  - component: {fileID: 3285366926109460346}
   m_Layer: 5
   m_Name: ProgressBarUI
   m_TagString: Untagged
@@ -284,6 +285,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBarUI
   cuttingCounter: {fileID: 3553603548463269143}
   barImage: {fileID: 6987745722197036199}
+--- !u!114 &3285366926109460346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022618550820044514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500bcf58d6710450884128bd7f1d6608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  mode: 2
 --- !u!1001 &230847157831395480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,15 +312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15699914
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79749
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7500002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
       propertyPath: m_LocalRotation.w
