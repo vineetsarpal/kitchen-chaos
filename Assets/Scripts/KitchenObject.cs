@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class KitchenObject : MonoBehaviour
@@ -41,6 +42,19 @@ public class KitchenObject : MonoBehaviour
     {
         kitchenObjectParent.ClearKitchenObject();
         Destroy(gameObject);
+    }
+
+    public bool TryGetPlate(out PlateKitchenObject plateKitchenObject)
+    {
+        if (this is PlateKitchenObject)
+        {
+            plateKitchenObject = this as PlateKitchenObject;
+            return true;
+        } else
+        {
+            plateKitchenObject = null;
+            return false;
+        }
     }
 
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
