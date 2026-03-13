@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6409ea4e77afa4f92bf0755fdd8691ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KitchenObject
-  kitchenObjectSO: {fileID: 11400000, guid: d820367ee68a7435b8dc6396dcb8a689, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: fbfb26b13e2cf4b51a8ccc30610b9fae, type: 2}
 --- !u!1001 &7371639023437447636
 PrefabInstance:
   m_ObjectHideFlags: 0
