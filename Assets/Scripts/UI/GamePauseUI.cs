@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    [SerializeField] private Button resumeButotn;
+    [SerializeField] private Button resumeButton;
     [SerializeField] private Button mainMenuButton;
+    [SerializeField] private Button optionsButton;
 
     private void Awake()
     {
-        resumeButotn.onClick.AddListener(() =>
+        resumeButton.onClick.AddListener(() =>
         {
             KitchenGameManager.Instance.TogglePauseGame();
         });
@@ -17,6 +18,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         mainMenuButton.onClick.AddListener(() =>
         {
             Loader.Load(Loader.Scene.MainMenuScene); 
+        });
+
+        optionsButton.onClick.AddListener(() =>
+        {
+            OptionsUI.Instance.Show();
         });
     }
     private void Start()
