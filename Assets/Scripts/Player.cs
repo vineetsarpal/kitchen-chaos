@@ -21,6 +21,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     private Vector3 lastInteractDir;
     private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
+    private bool missingKitchenGameManagerWarningShown;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
         if (Instance != null)
         {
-            Debug.LogError("There is more than on Player instance!");
+            Debug.LogError("There is more than one Player instance!");
         }
         Instance = this;
     }
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
             selectedCounter.Interact(this);
         }
     }
-        private void GameInput_OnInteractAlternateAction(object sender, System.EventArgs e)
+    private void GameInput_OnInteractAlternateAction(object sender, System.EventArgs e)
     {
         if (selectedCounter != null)
         {
