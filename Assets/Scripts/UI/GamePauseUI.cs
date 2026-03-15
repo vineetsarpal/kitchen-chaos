@@ -22,7 +22,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         optionsButton.onClick.AddListener(() =>
         {
-            OptionsUI.Instance.Show();
+            Hide();
+            OptionsUI.Instance.Show(Show);
         });
     }
     private void Start()
@@ -44,6 +45,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
+        resumeButton.Select();   
     }
 
     private void Hide()
