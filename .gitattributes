@@ -138,3 +138,7 @@
 *.gz lfs-file
 *.rar lfs-file
 *.tar lfs-file
+
+# Ignore all ShaderLab files for GitHub language stats
+*.shader linguist-vendored
+*.shaders linguist-vendored
